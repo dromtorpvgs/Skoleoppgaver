@@ -13,7 +13,7 @@ KRAV OG FORVENTNINGER::
 
 - Nettsiden skal ha innhold som beskriver kriteriene over. 
 - Proft design er ikke like viktig som innhold og gode ideer. Men prøv å gjøre så mye design dere kan. Jeg kan ferdigstille designet.
-- Pluss for kreativitet!
+- Pluss for kreativitet og brukervennlighet!
 - Nettsiden leveres på github i tilsvarende mappe på deres repository. 
 - Frist er torsdag kl 15:30. Du SKAL levere noe for å få godkjent.
 
