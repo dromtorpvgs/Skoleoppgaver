@@ -4,7 +4,7 @@
 "mkdir" for å lage ny mappe hvis du trenger det
 
 2. Inne i repositoriet/mappen din, først sjekk om det er endringer i repositoriet ditt. Dette gjør du med
-"git fetch" (sjekke om det er endringer), og til slutt "git status". 
+"git fetch" (sjekke om det er endringer), og til slutt "git pull". 
 
 3. Deretter sjekker du status på git repositoriet ditt, nemlig "git status". Dette vil liste opp forskjellen mellom ditt
 lokale repository og github repository. "git status" vil fortelle deg neste steg. 
