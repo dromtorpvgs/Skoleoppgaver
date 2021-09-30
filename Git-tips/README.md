@@ -1,4 +1,4 @@
-# Github normal worflow
+# Github worflow
 
 1. Finn repositoriet ditt på hjemmeområde ditt i terminalen. Bruk "cd" for å navigere deg inn i mappene og
 "mkdir" for å lage ny mappe hvis du trenger det
