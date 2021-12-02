@@ -125,17 +125,33 @@ const data = {
 }
 
 var count = 0;
+var poeng = 0;
+
+document.getElementById('answerArea').style.display = "none";
+document.getElementById('next').innerText = "Start Spillet";
+
+document.getElementById("next").onclick = function() {
+  console.log('start spillet');
+  showContent();
+  changeContent(count);
+}
+
+function showContent() {
+  document.getElementById('answerArea').style.display = "flex";
+  document.getElementById('next').innerText = "Neste spørsmål";
+}
 
 function changeContent(count) {
 
   if (count <= 11) {
 
       updateAnswers(count);
-      //checkAnswers(count);
 
   } else {
-    console.log('Spillet er ferdig');
+    console.log('Spillet er ferdig. Du har poeng:', poeng);
     document.getElementById('answerArea').style.display = "none";
+    document.getElementById('sporsmal').innerText = "Gratulerer, du er ferdig. Du har klart "+poeng+" av 10 poeng";
+    document.getElementById('nextButton').style.display = "none";
   }
 
 }
@@ -164,44 +180,50 @@ function updateAnswers(count) {
 
 document.getElementById("1").onclick = function() {
   var correctIndex = data.questions[count].correctIndex;
-  count++;
   console.log(count);
   if (correctIndex == 1) {
     console.log('Du svarte riktig');
+    poeng++;
+    console.log('Du har poeng: ', poeng);
   }
-
+  count++;
   changeContent(count);
 }
 //Alternativ 1
 document.getElementById("2").onclick = function() {
   var correctIndex = data.questions[count].correctIndex;
-  count++;
+  //
   console.log(count);
   if (correctIndex == 2) {
     console.log('Du svarte riktig');
+    poeng++;
   }
+  count++;
 
-  changeContent(count);
 }
 // 2
 document.getElementById("3").onclick = function() {
   var correctIndex = data.questions[count].correctIndex;
-  count++;
+  //count++;
   console.log(count);
   if (correctIndex == 3) {
     console.log('Du svarte riktig');
+    poeng++;
   }
+  count++;
   changeContent(count);
+
 }
 
 // 3
 document.getElementById("4").onclick = function() {
   var correctIndex = data.questions[count].correctIndex;
-  count++;
+  //count++;
   console.log(count);
   if (correctIndex == 4) {
     console.log('Du svarte riktig');
+    poeng++;
   }
-
+  count++;
   changeContent(count);
 }
