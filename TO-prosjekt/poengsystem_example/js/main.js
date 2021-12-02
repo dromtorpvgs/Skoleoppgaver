@@ -134,6 +134,7 @@ function changeContent(count) {
       //checkAnswers(count);
 
   } else {
+    console.log('Spillet er ferdig');
     document.getElementById('answerArea').style.display = "none";
   }
 
