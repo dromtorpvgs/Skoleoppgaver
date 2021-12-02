@@ -6,8 +6,8 @@
 
 ## Lag en nettside:​
 
-## Du skal finne været (valgfritt) per nå på minst 4 steder. ​
+### Du skal finne været (valgfritt) per nå på minst 4 steder. ​
 
-## Du kan velge hvilke vær du velger å vise og hvilke steder. ​
+### Du kan velge hvilke vær du velger å vise og hvilke steder. ​
 
-## Bruk JS, document.getElementById("") for å bytte ut innholdet, slik som I quizen. 
+### Bruk JS, document.getElementById("") for å bytte ut innholdet, slik som I quizen. 
