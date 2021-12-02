@@ -130,14 +130,12 @@ function changeContent(count) {
 
   if (count <= 11) {
 
-      getAnswers(count);
-      checkAnswers(count);
-
+      updateAnswers(count);
+      //checkAnswers(count);
 
   } else {
-    console.log("Du er ferdig med spillet");
+    document.getElementById('answerArea').style.display = "none";
   }
-
 
 }
 
@@ -146,7 +144,7 @@ function changeContent(count) {
     update_answers(count);
 });*/
 
-function getAnswers(count) {
+function updateAnswers(count) {
   var question = data.questions[count].question;
   var alternativ1 = data.questions[count].answers[0];
   var alternativ2 = data.questions[count].answers[1];
@@ -163,9 +161,46 @@ function getAnswers(count) {
   document.getElementById("4").innerText = alternativ4;
 }
 
-function checkAnswers(count) {
-
-  document.getElementById("1").onclick = function() {
-    console.log('Button is pushed');
+document.getElementById("1").onclick = function() {
+  var correctIndex = data.questions[count].correctIndex;
+  count++;
+  console.log(count);
+  if (correctIndex == 1) {
+    console.log('Du svarte riktig');
   }
+
+  changeContent(count);
+}
+//Alternativ 1
+document.getElementById("2").onclick = function() {
+  var correctIndex = data.questions[count].correctIndex;
+  count++;
+  console.log(count);
+  if (correctIndex == 2) {
+    console.log('Du svarte riktig');
+  }
+
+  changeContent(count);
+}
+// 2
+document.getElementById("3").onclick = function() {
+  var correctIndex = data.questions[count].correctIndex;
+  count++;
+  console.log(count);
+  if (correctIndex == 3) {
+    console.log('Du svarte riktig');
+  }
+  changeContent(count);
+}
+
+// 3
+document.getElementById("4").onclick = function() {
+  var correctIndex = data.questions[count].correctIndex;
+  count++;
+  console.log(count);
+  if (correctIndex == 4) {
+    console.log('Du svarte riktig');
+  }
+
+  changeContent(count);
 }
