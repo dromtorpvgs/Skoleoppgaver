@@ -227,3 +227,9 @@ document.getElementById("4").onclick = function() {
   count++;
   changeContent(count);
 }
+
+url = 'https://api.met.no/weatherapi/locationforecast/2.0/complete?lat=-16.516667&lon=-68.166667&altitude=4150'
+
+fetch(url).then(function(response) {
+  console.log(response.json());
+});

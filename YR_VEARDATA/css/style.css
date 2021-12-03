@@ -1,0 +1,18 @@
+
+div {
+  border: solid black 1px;
+}
+
+#navigationBar {
+  display: flex;
+}
+
+button {
+  padding: 5px;
+  margin: 5px;
+  width: 100%;
+}
+
+#veardata {
+  height: 100vh;
+}
