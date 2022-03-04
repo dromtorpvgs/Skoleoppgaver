@@ -1,9 +1,9 @@
 # Skoleoppgaver
-Dette er skoleoppgavene fra  året 2021-2022.
+Dette repository inneholder skoleoppgavene fra året 2021-2022.
 
 ## Pågående prosjekter
-1. Databaseoppgave
-2. Express - API
-3. TO - prosjekt
+1. Flask Python
+2. Python Oppgaver
+3. IT sikkerhet (Ikke begynt)
 
 ### Oppgavene og forslag til løsninger vises i respektive mapper
