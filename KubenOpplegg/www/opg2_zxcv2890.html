@@ -1,0 +1,91 @@
+<html>
+<head>
+
+    <title>Kuben vgs</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/style-1.css">
+
+</head>
+
+<body>
+
+<div class='container'>
+
+    <div class="grid-page-container">
+        
+        
+        <div class="grid-page-item">
+            <span >Oppgave: Flyvende bever</span>
+        </div>
+        <div class="grid-page-item">
+            <span><img style="border-radius: 50px" src="gfx/flyingbeaver.jpg"\></span>
+        </div>
+        <div class="grid-page-item">
+            <span>
+                Sikkerhetsansvarlig har patchet sikkerhetshullet
+                fra forrige oppgave,
+                men finnes det fortsatt svakheter?
+            </span>
+        </div>
+        <div class="grid-page-item">
+            <span>
+                Hack systemet og logg inn som admin for å komme videre til neste oppgave
+            </span>
+        </div>
+        <div class="grid-page-item">
+            <span>
+                <form class="" id="loginForm" 
+                action="oppgave2_redir.php"
+                method="post"
+                onsubmit="return validateForm()"
+                >
+                    <input type="text"
+                    name="username"
+                    placeholder="Brukernavn">
+                    <br>
+                    <input type="password"
+                    name="password"
+                    placeholder="Passord">
+                    <br>
+                    <input type="submit"
+                    id="loginButton"
+                    value="Logg inn">
+                </form>
+                <script type ="text/javascript">
+                    function validateForm() {
+                        var username = document.forms["loginForm"]["username"].value;
+                        var password = document.forms["loginForm"]["password"].value;
+                        if (username != "admin") {
+                            alert("Feil brukernavn!");
+                            return false;
+                        }
+                        
+                        if (btoa(password) != "Rmx5aW5nQmVhdmVySXpBd2V6dW0xMjM=") {
+                            alert("Feil passord!");
+                            return false;
+                        }
+                        /*
+                        alert("Korrekt brukernavn og passord!")
+                        */
+                        return true;
+                        }
+                </script>
+            </span>
+        </div>
+        
+        
+        
+    </div>
+  
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+</body>
+
+</html>

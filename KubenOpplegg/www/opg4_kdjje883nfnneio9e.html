@@ -1,0 +1,94 @@
+<html>
+<head>
+
+    <title>Kuben vgs</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/style-1.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+</head>
+
+<body>
+
+<div class='container'>
+
+    <div class="grid-page-container">
+        
+        
+        <div class="grid-page-item">
+            <span >Oppgave: Kul koala</span>
+        </div>
+        <div class="grid-page-item">
+            <span><img style="border-radius: 50px" src="gfx/cool_koala_transparent.png"\></span>
+        </div>
+        <div class="grid-page-item">
+            <span>
+                Sikkerhetsansvarlig har nå fått oppsigelsesvarsel fordi bedriften har blitt hacket igjen.<br><br>
+                Han har blitt bedt om å aldri igjen bruke svake passord og følge standard regler for passord. <br><br>
+                <ul>
+                    <li>
+                        Minst 8 tegn
+                    </li>
+                    <li>
+                        Minst en stor bokstav
+                    </li>
+                    <li>
+                        Minst ett tall 
+                    </li>
+                </ul>
+                Klarer du å cracke passordet?
+            </span>
+        </div>
+        <div class="grid-page-item">
+            <span>
+                <form class="" id="loginForm" 
+                action="oppgave4_redir.php"
+                method="post"
+                onsubmit="return validateForm()"
+                >
+                    <input type="text"
+                    name="username"
+                    placeholder="Brukernavn">
+                    <br>
+                    <input type="password"
+                    name="password"
+                    placeholder="Passord">
+                    <br>
+                    <input type="submit"
+                    id="loginButton"
+                    value="Logg inn">
+                </form>
+                <script type ="text/javascript">
+                    function validateForm() {
+                        var username = document.forms["loginForm"]["username"].value;
+                        var password = document.forms["loginForm"]["password"].value;
+                        if (username != "admin") {
+                            alert("Feil brukernavn!");
+                            return false;
+                        }
+                        var md5Hash = CryptoJS.MD5(password);
+                        if (md5Hash.toString() != "2f4b1888619f3bc72b04b070b2fd01b5") {
+                            alert("Feil passord!");
+                            return false;
+                        }
+                        return true;
+                        }
+                </script>
+            </span>
+        </div>
+        
+        
+        
+    </div>
+  
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+</body>
+
+</html>
